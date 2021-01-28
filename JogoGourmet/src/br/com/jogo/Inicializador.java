@@ -23,13 +23,13 @@ public class Inicializador {
 	}
 
     private static void inicializar() {
-        arvoreBinaria.insert(null, "Massa", true);
-        arvoreBinaria.insert(arvoreBinaria.raiz, "Lasanha", true);
-        arvoreBinaria.insert(arvoreBinaria.raiz, "Bolo de chocolate", false);
+        arvoreBinaria.adiciona(null, "Massa", true);
+        arvoreBinaria.adiciona(arvoreBinaria.raiz, "Lasanha", true);
+        arvoreBinaria.adiciona(arvoreBinaria.raiz, "Bolo de chocolate", false);
     }
 
     public static void iniciarJogoGourmet() {
-        if (arvoreBinaria.isEmpty()) {
+        if (arvoreBinaria.raiz == null) {
             inicializar();
         }
 
