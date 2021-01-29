@@ -33,7 +33,7 @@ public class JogoController {
 	private int dialogInicial() {
         Object[] options = {"Ok"};
         return JOptionPane.showOptionDialog(null, Utilitario.getMessage("pense.prato", null) , Utilitario.messages.getString("titulo.jogo"),
-        		JOptionPane.PLAIN_MESSAGE, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+        		JOptionPane.PLAIN_MESSAGE, JOptionPane.DEFAULT_OPTION, null, options, options[0]);
     }
 	
 	private void informarPrato(No no, ArvoreBinaria arvoreBinaria) {
