@@ -1,7 +1,11 @@
-package br.com.jogo.dto;
+package br.com.jogo.domain;
 
-public class No {
+import java.io.Serializable;
 
+public class No implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	
 	private String valor;
 	private No noEsquerda;
 	private No noDireita;

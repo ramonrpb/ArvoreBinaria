@@ -1,11 +1,15 @@
-package br.com.jogo.dto;
+package br.com.jogo.domain;
 
-public class ArvoreBinaria {
+import java.io.Serializable;
 
-	public No raiz;
+public class ArvoreBinaria implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+
+	private No raiz;
 	
 	public void adiciona(No parentNode, String value, boolean choice) {
-        raiz = adicionaNovoNo(parentNode, value, choice);
+        setRaiz(adicionaNovoNo(parentNode, value, choice));
     }
 
     public void exibeArvore(No no) {
@@ -28,4 +32,12 @@ public class ArvoreBinaria {
 
         return noPai;
     }
+
+	public No getRaiz() {
+		return raiz;
+	}
+
+	public void setRaiz(No raiz) {
+		this.raiz = raiz;
+	}
 }
